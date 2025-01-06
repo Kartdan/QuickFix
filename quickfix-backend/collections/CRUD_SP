@@ -1,0 +1,24 @@
+POST /service-providers
+Content-Type: application/json
+
+{
+  "name": "Jane Smith",
+  "email": "jane@example.com",
+  "password_hash": "hashed_password",
+  "phone_number": "123456789",
+  "address": "456 Elm St"
+}
+
+GET /service-providers
+
+GET /service-providers/{provider_id}
+
+PUT /service-providers/{provider_id}
+Content-Type: application/json
+
+{
+  "name": "Jane Smith Updated",
+  "phone_number": "987654321"
+}
+
+DELETE /service-providers/{provider_id}

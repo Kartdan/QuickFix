@@ -1,0 +1,26 @@
+POST /bookings
+Content-Type: application/json
+
+{
+  "client_id": 1,
+  "provider_id": 2,
+  "service_id": 1,
+  "booking_date": "2023-12-30T14:00:00Z",
+  "notes": "Fix a sink leak"
+}
+
+GET /bookings
+
+GET /clients/{client_id}/bookings
+
+GET /service-providers/{provider_id}/bookings
+
+PUT /bookings/{booking_id}
+Content-Type: application/json
+
+{
+  "status": "confirmed",
+  "notes": "Updated booking notes"
+}
+
+DELETE /bookings/{booking_id}

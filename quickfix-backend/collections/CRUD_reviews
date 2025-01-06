@@ -1,0 +1,23 @@
+POST /reviews
+Content-Type: application/json
+
+{
+  "client_id": 1,
+  "provider_id": 2,
+  "rating": 5,
+  "review_text": "Great job!"
+}
+
+GET /reviews
+
+GET /service-providers/{provider_id}/reviews
+
+PUT /reviews/{review_id}
+Content-Type: application/json
+
+{
+  "rating": 4,
+  "review_text": "Good job, but there was a delay."
+}
+
+DELETE /reviews/{review_id}

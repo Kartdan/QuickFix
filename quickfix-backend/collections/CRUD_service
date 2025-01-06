@@ -1,0 +1,19 @@
+POST /services
+Content-Type: application/json
+
+{
+  "service_name": "Plumbing"
+}
+
+GET /services
+
+GET /services/{service_id}
+
+PUT /services/{service_id}
+Content-Type: application/json
+
+{
+  "service_name": "Updated Plumbing"
+}
+
+DELETE /services/{service_id}

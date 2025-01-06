@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "2b2aa6bc-7bc9-43ac-9f26-0fa75904b602",
+		"name": "quickfix",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40702824"
+	},
+	"item": [
+		{
+			"name": "clients",
+			"item": [
+				{
+					"name": "/clients",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password_hash\": \"hashed_password\",\r\n  \"phone_number\": \"123456789\",\r\n  \"address\": \"123 Main St\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/clients/{email}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clients/john@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"john@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/clients/{email}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john@example.com\",\r\n  \"password_hash\": \"hashed_password1\",\r\n  \"phone_number\": \"123456789\",\r\n  \"address\": \"123 Main St\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/clients/john@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"john@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/clients/{email}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/clients/john@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"john@example.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "providers",
+			"item": [
+				{
+					"name": "/providers",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Jane Smith\",\r\n  \"email\": \"jane@example.com\",\r\n  \"password_hash\": \"hashed_password\",\r\n  \"phone_number\": \"123456789\",\r\n  \"address\": \"123 Main St\",\r\n  \"jobs\": [\r\n    {\r\n      \"jobName\": \"Plumbing\",\r\n      \"industry\": \"industry\"\r\n    }\r\n  ]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/providers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"providers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/providers/{email}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/providers/jane@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"providers",
+								"jane@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/providers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/providers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"providers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/providers/{email}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Jane Smith\",\r\n  \"email\": \"jane@example.com\",\r\n  \"password_hash\": \"hashed_password\",\r\n  \"phone_number\": \"123456789\",\r\n  \"address\": \"123 Main St\",\r\n  \"jobs\": [\r\n    {\r\n      \"jobName\": \"Electrician\",\r\n      \"industry\": \"industry\"\r\n    }\r\n  ]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8080/providers/jane@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"providers",
+								"jane@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/providers/{email}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/providers/jane@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"providers",
+								"jane@example.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jobs",
+			"item": [
+				{
+					"name": "/jobs",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"jobName\": \"Software Developer\",\r\n  \"industry\": \"IT\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/jobs/{job_name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jobs/Software Developer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"Software Developer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/jobs/{job_name}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"jobName\": \"Web Developer\",\r\n  \"industry\": \"IT\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/jobs/Software Developer_IT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"Software Developer_IT"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/jobs/{jobName}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jobs/Software Developer_IT",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jobs",
+								"Software Developer_IT"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reviews",
+			"item": [
+				{
+					"name": "/reviews/{providerName}",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": \"john@example.com\",\r\n    \"rating\": 5,\r\n    \"reviewText\": \"Jane is a fantastic plumber! Highly recommend!\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/reviews/jane@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reviews",
+								"jane@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/reviews/{providerName}/{reviewId}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": " application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": \"john@example.com\",\r\n    \"rating\": 4,\r\n    \"reviewText\": \"Jane is a great plumber, but I had to wait a bit longer than expected.\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/reviews/jane@example.com/john@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reviews",
+								"jane@example.com",
+								"john@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/reviews/{providerName}/{reviewId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reviews/jane@example.com/john@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reviews",
+								"jane@example.com",
+								"john@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/reviews/{providerName}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reviews/jane@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reviews",
+								"jane@example.com"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/reviews/provider/{providerName}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/reviews/provider/jane@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"reviews",
+								"provider",
+								"jane@example.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

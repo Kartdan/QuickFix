@@ -1,0 +1,10 @@
+POST /service-providers/{provider_id}/services
+Content-Type: application/json
+
+{
+  "service_id": 1
+}
+
+GET /service-providers/{provider_id}/services
+
+DELETE /service-providers/{provider_id}/services/{service_id}

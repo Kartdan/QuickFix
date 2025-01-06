@@ -1,0 +1,25 @@
+POST /clients
+
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password_hash": "hashed_password",
+  "phone_number": "123456789",
+  "address": "123 Main St"
+}
+
+GET /clients
+
+GET /clients/{client_id}
+
+PUT /clients/{client_id}
+Content-Type: application/json
+
+{
+  "name": "John Doe Updated",
+  "phone_number": "987654321"
+}
+
+DELETE /clients/{client_id}
+

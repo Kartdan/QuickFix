@@ -1,0 +1,71 @@
+.service-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+  
+    /* Header Styles */
+    .service-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+  
+      .logo {
+        font-size: 20px;
+        font-weight: bold;
+      }
+  
+      .nav-links {
+        display: flex;
+        gap: 20px;
+  
+        a {
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+        }
+      }
+    }
+  
+    /* Service Selection Section */
+    .service-selection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: 20px;
+  
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #333;
+      }
+  
+      .service-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+  
+        .service-btn {
+          background-color: #e0e0e0;
+          color: #333;
+          padding: 10px 20px;
+          font-size: 16px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          text-align: center;
+          width: 200px;
+  
+          &:hover {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  
